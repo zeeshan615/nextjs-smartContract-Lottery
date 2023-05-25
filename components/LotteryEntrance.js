@@ -59,11 +59,11 @@ export default function LotteryEntrance() {
             updateUI()
         }
     }, [isWeb3Enabled])
-    
+
     const handleSuccess = async (tx) => {
         try {
             await tx.wait(1)
-            updateUIValues()
+            updateUI()
             handleNewNotification(tx)
         } catch (error) {
             console.log(error)
